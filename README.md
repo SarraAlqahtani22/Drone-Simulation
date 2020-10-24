@@ -5,9 +5,9 @@ Default setting: the default setting of this program will generate 2000*2000 pix
 
 Please read the comments in the files to see which parameters are available for changes.
 
-## *File explanation (By execution sequence): *
+## *File explanation (By execution sequence):*
 
-   ## 1. `Generator.py`: Generating the positions, size and rotation angle of all the feature on the simulated map and then draw them out.
+   ### 1. `Generator.py`: Generating the positions, size and rotation angle of all the feature on the simulated map and then draw them out.
     
         Output: GT_Full.png (the raw ground truth image)
         
@@ -38,7 +38,7 @@ Please read the comments in the files to see which parameters are available for 
             Returned by those functions are the color and alpha to be used by different features.
 
                 
-   ## 2. `blurry.py`: *Taking the two inputs from Generator.py and add salt and pepper noise w/ MODIFIABLE intensity and proportion to testing1.png.*
+   ### 2. `blurry.py`: *Taking the two inputs from Generator.py and add salt and pepper noise w/ MODIFIABLE intensity and proportion to testing1.png.*
     
         Output: wFakeObjects_Full+s&p.png (Added salt and pepper noise to testing1.png)
 
@@ -49,7 +49,7 @@ Please read the comments in the files to see which parameters are available for 
                 portion: the proportion of salt noise in the overall noise
 
     
-##    3. `Interpreter.py`: *Calculating the information within each region(smaller square) and outputting the RAW information map. Also adding the gaussian noise to it.*
+###    3. `Interpreter.py`: *Calculating the information within each region(smaller square) and outputting the RAW information map. Also adding the gaussian noise to it.*
     
         Output: GT_Info_Convoluted.npy (The information map, an 2D array which contains the ground-truth information of each subregion)
                 
@@ -72,7 +72,9 @@ Please read the comments in the files to see which parameters are available for 
                 What it means is:(R-(B+G)/2)/255; More information is available within the file
 
      
- ##   4. `Reconstruct.py`: *Visualization of the information map. Can be used to compare with the result given by GT-testing_bw.png. We can visually find that we have some ROI being*
+ ##   4. `Reconstruct.py`: 
+ ### *Visualization of the information map. Can be used to compare with the result given by GT-testing_bw.png. We can visually find that we have some ROI being*
         hidden and some False positive (FP) start to appear on the product map. This fits exactly with the nature of a typical output from a Neural Network.
      
-  ##  5. `Normalizer.py`: *Turn the information map from raw data into NN-like output (0-1 range). In this case, sigmoid function is used.*
+  ##  5. `Normalizer.py`: 
+  ### *Turn the information map from raw data into NN-like output (0-1 range). In this case, sigmoid function is used.*
