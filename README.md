@@ -1,5 +1,9 @@
 # Drone_Simulation
-*Description: This Repo aimed in providing toolchain for simulating output result provided by neural network.*
+*Description: This Repo aimed in providing toolchain for simulating output result provided by neural network to help test autonomous navigation algorithms for UAVs*
+This simulation has been used in the following papers:
+1) shley Peake, Joe McCalmon, Yixin Zhang, Daniel Myers, Sarra Alqahtani, Victor Paúl Pauca, “Deep Reinforcement Learning for Adaptive Exploration of Unknown Environments”, the IEEE International Conference on Unmanned Aircraft Systems, (ICUAS ’21).
+2) Yixin Zhang, Joe McCalmon, Ashley Peake, Sarra Alqahtani, Victor Paúl Pauca, “A Symbolic-AI Approach for UAV Exploration Tasks”, the 8th International Conference on Automation, Robotics and Applications (ICARA 2021), accepted.
+3) Ashley Peake*, Joe McCalmon*, Yixin Zhang, Benjamin Raiford, and Sarra Alqahtani, “Wilderness Search and Rescue Missions using Deep Reinforcement Learning,” IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR), 2020.
 
 Default setting: the default setting of this program will generate 2000*2000 pixel image with different features on it.
 
